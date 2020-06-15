@@ -38,6 +38,7 @@
   --hrline: #E5E5E5;
   --rating: #666666;
   --rating-background: #F2F2F2;
+  --form-input-hover: #EBEBEB;
 }
 
 *,
@@ -584,10 +585,12 @@ body {
 }
 
 .booking-form input,
-.booking-form label {
+.booking-form label,
+.booking-form input::placeholder {
   text-transform: uppercase;
   font-weight: bold;
   line-height: 1.86;
+  color: var(--black);
 }
 
 .form-date-in-container,
@@ -604,6 +607,8 @@ body {
   padding-left: 13px;
   border: none;
   background-color: var(--background-grey);
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .form-date-in-container {
@@ -693,6 +698,21 @@ button.plus-icon {
 
 .calendar:active path {
   fill: var(--blue);
+}
+
+.booking-form input:hover {
+  background-color: var(--form-input-hover);
+}
+
+.booking-form input:focus {
+  outline: none;
+  background-color: var(--white);
+  border: 2px solid var(--hrline);
+}
+
+.date-in-span input:focus,
+.date-out-span input:focus {
+  padding-left: 11px;
 }
 
 .booking-form button:not([type="submit"]) {
